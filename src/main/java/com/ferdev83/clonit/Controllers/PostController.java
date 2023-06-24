@@ -1,7 +1,7 @@
 package com.ferdev83.clonit.Controllers;
 
-import com.ferdev83.clonit.Dtos.PostRequest;
-import com.ferdev83.clonit.Dtos.PostResponse;
+import com.ferdev83.clonit.Services.Dtos.PostRequest;
+import com.ferdev83.clonit.Services.Dtos.PostResponse;
 import com.ferdev83.clonit.Services.PostService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

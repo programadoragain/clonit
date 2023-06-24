@@ -1,4 +1,4 @@
-package com.ferdev83.clonit.Dtos;
+package com.ferdev83.clonit.Services.Dtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

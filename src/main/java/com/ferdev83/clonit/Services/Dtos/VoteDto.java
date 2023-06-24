@@ -1,4 +1,4 @@
-package com.ferdev83.clonit.Dtos;
+package com.ferdev83.clonit.Services.Dtos;
 
 import com.ferdev83.clonit.Entities.VoteType;
 import lombok.AllArgsConstructor;

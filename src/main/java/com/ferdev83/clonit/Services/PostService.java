@@ -1,7 +1,7 @@
 package com.ferdev83.clonit.Services;
 
-import com.ferdev83.clonit.Dtos.PostRequest;
-import com.ferdev83.clonit.Dtos.PostResponse;
+import com.ferdev83.clonit.Services.Dtos.PostRequest;
+import com.ferdev83.clonit.Services.Dtos.PostResponse;
 import com.ferdev83.clonit.Entities.Post;
 import com.ferdev83.clonit.Entities.Subreddit;
 import com.ferdev83.clonit.Entities.User;

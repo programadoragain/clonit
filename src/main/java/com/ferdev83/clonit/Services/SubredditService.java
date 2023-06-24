@@ -1,6 +1,6 @@
 package com.ferdev83.clonit.Services;
 
-import com.ferdev83.clonit.Dtos.SubredditDto;
+import com.ferdev83.clonit.Services.Dtos.SubredditDto;
 import com.ferdev83.clonit.Entities.Subreddit;
 import com.ferdev83.clonit.Repositories.SubredditRepository;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

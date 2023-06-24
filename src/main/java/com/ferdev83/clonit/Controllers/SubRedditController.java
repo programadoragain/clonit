@@ -1,6 +1,6 @@
 package com.ferdev83.clonit.Controllers;
 
-import com.ferdev83.clonit.Dtos.SubredditDto;
+import com.ferdev83.clonit.Services.Dtos.SubredditDto;
 import com.ferdev83.clonit.Services.SubredditService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,9 @@
 package com.ferdev83.clonit.Services;
 
-import com.ferdev83.clonit.Dtos.AuthenticationResponse;
-import com.ferdev83.clonit.Dtos.LoginRequest;
-import com.ferdev83.clonit.Dtos.RefreshTokenRequest;
-import com.ferdev83.clonit.Dtos.RegisterRequest;
+import com.ferdev83.clonit.Services.Dtos.AuthenticationResponse;
+import com.ferdev83.clonit.Services.Dtos.LoginRequest;
+import com.ferdev83.clonit.Services.Dtos.RefreshTokenRequest;
+import com.ferdev83.clonit.Services.Dtos.RegisterRequest;
 import com.ferdev83.clonit.Entities.NotificationEmail;
 import com.ferdev83.clonit.Entities.User;
 import com.ferdev83.clonit.Entities.VerificationToken;
@@ -32,14 +32,15 @@ public class AuthenticationService {
     private UserRepository userRepository;
     @Autowired
     private VerificationTokenRepository verificationTokenRepository;
+
+    @Autowired
+    private RefreshTokenService refreshTokenService;
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
     private MailService mailService;
-
     @Autowired
     private AuthenticationManager authenticationManager;
-
     @Autowired
     private JwtProvider jwtProvider;
 
@@ -103,5 +104,13 @@ public class AuthenticationService {
     }
 
     public AuthenticationResponse refreshToken(RefreshTokenRequest refreshTokenRequest) {
+        refreshTokenService.validateRefreshToken(refreshTokenRequest.getRefreshToken());
+        String token= jwtProvider.generateTokenWithUsername(refreshTokenRequest.getUsername());
+        return AuthenticationResponse.builder()
+                .authenticationToken(token)
+                .refreshToken(refreshTokenService.generateRefreshToken().getToken())
+                .expiresAt(Instant.now().plusMillis(jwtProvider.getJwtTokenExpirationTime()))
+                .username(refreshTokenRequest.getUsername())
+                .build();
     }
 }

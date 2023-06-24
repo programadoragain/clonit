@@ -1,6 +1,6 @@
 package com.ferdev83.clonit.Services;
 
-import com.ferdev83.clonit.Dtos.VoteDto;
+import com.ferdev83.clonit.Services.Dtos.VoteDto;
 import com.ferdev83.clonit.Entities.Post;
 import com.ferdev83.clonit.Entities.Vote;
 import com.ferdev83.clonit.Repositories.PostRepository;

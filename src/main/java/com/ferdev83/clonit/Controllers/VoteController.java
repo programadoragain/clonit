@@ -1,6 +1,6 @@
 package com.ferdev83.clonit.Controllers;
 
-import com.ferdev83.clonit.Dtos.VoteDto;
+import com.ferdev83.clonit.Services.Dtos.VoteDto;
 import com.ferdev83.clonit.Services.VoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

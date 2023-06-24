@@ -1,12 +1,11 @@
 package com.ferdev83.clonit.Mapper;
 
-import com.ferdev83.clonit.Dtos.PostRequest;
-import com.ferdev83.clonit.Dtos.PostResponse;
+import com.ferdev83.clonit.Services.Dtos.PostRequest;
+import com.ferdev83.clonit.Services.Dtos.PostResponse;
 import com.ferdev83.clonit.Entities.*;
 import com.ferdev83.clonit.Repositories.CommentRepository;
 import com.ferdev83.clonit.Repositories.VoteRepository;
 import com.ferdev83.clonit.Services.AuthenticationService;
-import com.ferdev83.clonit.Services.CommentService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;

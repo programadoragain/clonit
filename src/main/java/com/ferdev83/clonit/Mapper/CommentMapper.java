@@ -1,6 +1,6 @@
 package com.ferdev83.clonit.Mapper;
 
-import com.ferdev83.clonit.Dtos.CommentDto;
+import com.ferdev83.clonit.Services.Dtos.CommentDto;
 import com.ferdev83.clonit.Entities.Comment;
 import com.ferdev83.clonit.Entities.Post;
 import com.ferdev83.clonit.Entities.User;
